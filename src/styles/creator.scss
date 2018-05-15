@@ -1,0 +1,54 @@
+@import 'colors';
+#creator {
+  width: 40%;
+  background-color: white;
+  h1 {
+    margin: 0;
+    padding: 1rem;
+    color: $violet;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
+    letter-spacing: 0.4px;
+    display: flex;
+    span {
+      flex-grow: 2;
+    }
+    button {
+      $i: 0;
+      $empty: true !default;
+      $box-shadow: null;
+      @while $i < 3 {
+        @if $empty {
+          $box-shadow: #{$i}px #{$i}px 3px 0 gray;
+          $empty: false;
+        } @else {
+          $box-shadow: $box-shadow, #{$i}px #{$i}px 3px 0 gray;
+        }
+        $i: $i+1;
+      }
+      align-self: flex-end;
+      width: 2rem;
+      height: 2rem;
+      line-height: 1rem;
+      color: white;
+      background-color: $violet;
+      border: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      transition: 0.2s;
+      padding: 0;
+      display: inline-block;
+      border-radius: 50%;
+      box-shadow: $box-shadow;
+      &:last-of-type {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+      }
+      &:hover {
+        background-color: $violet-hover;
+      }
+    }
+  }
+}

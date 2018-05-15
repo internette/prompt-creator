@@ -1,0 +1,21 @@
+@import 'colors';
+
+#bash-prompt {
+  width: 60%;
+  #bash-prompt-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+#title-bar {
+  background-color: mix(gainsboro, gray, 70%);
+  background-image: radial-gradient(circle at 1vw center, red 0.4rem, transparent 0.4rem), radial-gradient(circle at 2.4vw center, gold 0.4rem, transparent 0.4rem), radial-gradient(circle at 3.7vw center, mix(green, lime, 60%) 0.4rem, transparent 0.4rem);
+  height: 1.5rem;
+}
+#content-container {
+  height: 100%;
+  background-color: $violet;
+}
