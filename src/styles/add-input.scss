@@ -19,12 +19,18 @@
       padding: 0.5rem 1rem;
       border-top-left-radius: 1rem;
       border-bottom-left-radius: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
       &:focus {
         outline: none;
       }
     }
     .input-button-container {
       position: relative;
+      button {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
       &:last-child button {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;

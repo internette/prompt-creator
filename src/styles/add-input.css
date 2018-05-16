@@ -16,11 +16,16 @@
       background: transparent;
       padding: 0.5rem 1rem;
       border-top-left-radius: 1rem;
-      border-bottom-left-radius: 1rem; }
+      border-bottom-left-radius: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px; }
       #add-item #input-container input:focus {
         outline: none; }
     #add-item #input-container .input-button-container {
       position: relative; }
+      #add-item #input-container .input-button-container button {
+        font-size: 0.9rem;
+        font-weight: 500; }
       #add-item #input-container .input-button-container:last-child button {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem; }
