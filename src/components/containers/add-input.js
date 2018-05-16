@@ -12,8 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    updateValue: (e)=> {
-      console.log(e)
+    addItem: (props)=> {
+
     }
   }
 }
