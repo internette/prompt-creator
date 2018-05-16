@@ -6,9 +6,9 @@ import ColorButton from '../containers/color-button';
 import '../../styles/list-item.css';
 
 const ListItemPresenter = (props) => {
-  const child_view = props.is_editing ? <input type="text" style={{ color: props.text_color.hex_string, backgroundColor: props.background_color.hex_string }}/> : <span style={{ color: props.text_color.hex_string, backgroundColor: props.background_color.hex_string }}>{ props.input_value }</span>;
+  const child_view = props.is_editing ? <input type="text"/> : <span>{ props.input_value }</span>;
   return (
-    <li className="list-item">
+    <li className="list-item" style={{ color: props.text_color.hex_string, backgroundColor: props.background_color.hex_string }}>
       <div id="input-container">
         { child_view }
         <ColorButton subject="text" toggle_state={ props.text_btn_toggle }/>
