@@ -15,13 +15,25 @@ const AddInputPresenter = (props) => {
           <ColorButton subject="background" toggle_state={ props.background_btn_toggle }/>
         </div>
       </div>
-      <button id={ props.button_view === 'add' ? "add-color" : "edit-color" } onClick={ ()=> { return props.addItem({
-        input_value: props.input_value,
-        text_color: props.text_color,
-        background_color: props.background_color,
-        text_btn_toggle: props.text_btn_toggle,
-        background_btn_toggle: props.background_btn_toggle
-      }) } }>{ props.button_view === 'add' ? '+' : '√' }</button>
+      <button id={ props.button_view === 'add' ? "add-color" : "edit-color" } onClick={ ()=> {
+        if(props.button_view === 'add'){
+          return props.addItem({
+            input_value: props.input_value,
+            text_color: props.text_color,
+            background_color: props.background_color,
+            text_btn_toggle: props.text_btn_toggle,
+            background_btn_toggle: props.background_btn_toggle
+          })
+        } else {
+          return props.editItem({
+            input_value: props.input_value,
+            text_color: props.text_color,
+            background_color: props.background_color,
+            text_btn_toggle: props.text_btn_toggle,
+            background_btn_toggle: props.background_btn_toggle
+          })
+        }
+       } }>{ props.button_view === 'add' ? '+' : '√' }</button>
     </div>
   );
 }
