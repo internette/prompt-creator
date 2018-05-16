@@ -32,14 +32,22 @@
     padding: 0;
     margin: 4px;
     background: transparent;
+    position: relative;
     width: $square-size;
     height: $square-size;
     span {
-      height: 100%;
-      width: 100%;
+      width: $square-size;
+      height: $square-size;
       margin: 0;
       border: 1px solid black;
       display: block;
+      transition: 0.2s;
+    }
+    &:hover span {
+      width: 20px;
+      height: 20px;
+      z-index: 10;
+      margin: -3px 0 0 -3px;
     }
   }
 }
