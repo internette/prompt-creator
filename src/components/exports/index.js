@@ -1,0 +1,67 @@
+export const colors = [
+  {
+    colorId: '000',
+    hexString: "#000000",
+    name: "Black"
+  },{
+    colorId: '001',
+    hexString: "#800000",
+    name: "Maroon"
+  }, {
+    colorId: '002',
+    hexString: "#008000",
+    name: "Green"
+  }, {
+    colorId: '003',
+    hexString: "#808000",
+    name: "Olive"
+  }, {
+    colorId: '004',
+    hexString: "#000080",
+    name: "Navy"
+  }, {
+    colorId: '005',
+    hexString: "#800080",
+    name: "Purple"
+  }, {
+    colorId: '006',
+    hexString: "#008080",
+    name: "Teal"
+  }, {
+    colorId: '007',
+    hexString: "#c0c0c0",
+    name: "Silver"
+  }, {
+    colorId: '008',
+    hexString: "#808080",
+    name: "Grey"
+  }, {
+    colorId: '009',
+    hexString: "#ff0000",
+    name: "Red"
+  }, {
+    colorId: '010',
+    hexString: "#00ff00",
+    name: "Lime"
+  }, {
+    colorId: '011',
+    hexString: "#ffff00",
+    name: "Yellow"
+  }, {
+    colorId: '012',
+    hexString: "#0000ff",
+    name: "Blue"
+  }, {
+    colorId: '013',
+    hexString: "#ff00ff",
+    name: "Fuchsia"
+  }, {
+    colorId: '014',
+    hexString: "#00ffff",
+    name: "Aqua"
+  }, {
+    colorId: '015',
+    hexString: "#ffffff",
+    name: "White"
+  },
+]

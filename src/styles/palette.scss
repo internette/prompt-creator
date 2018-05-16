@@ -1,0 +1,45 @@
+@import 'colors';
+.palette {
+  grid-template-columns: repeat(5, 20%);
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  padding: 5px;
+  border-top: 7px solid $violet;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 1px rgba(black, 0.3);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  &.active {
+    display: grid;
+  }
+  &:before {
+    $arrow-size: 7px;
+    content: '';
+    display: block;
+    position: absolute;
+    border-left: $arrow-size solid transparent;
+    border-right: $arrow-size solid transparent;
+    top: -$arrow-size - 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: $arrow-size solid $violet;
+  }
+  button {
+    $square-size: 13px;
+    padding: 0;
+    margin: 4px;
+    background: transparent;
+    width: $square-size;
+    height: $square-size;
+    span {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      border: 1px solid black;
+      display: block;
+    }
+  }
+}

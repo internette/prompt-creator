@@ -22,6 +22,9 @@
         outline: none;
       }
     }
+    .input-button-container {
+      position: relative;
+    }
     button {
       border: 0;
       &.input-button {

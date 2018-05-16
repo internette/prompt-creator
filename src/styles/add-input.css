@@ -18,6 +18,8 @@
       padding: 0.5rem 1rem; }
       #add-item #input-container input:focus {
         outline: none; }
+    #add-item #input-container .input-button-container {
+      position: relative; }
     #add-item #input-container button {
       border: 0; }
       #add-item #input-container button.input-button {
