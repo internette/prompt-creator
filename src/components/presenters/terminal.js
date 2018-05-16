@@ -9,7 +9,13 @@ const TerminalPresenter = (props) => {
         <div id="bash-prompt-content">
           <div id="title-bar"></div>
           <div id="content-container">
-            <div id="content"></div>
+            <div id="content">
+              {
+                props.parts.map((part, index)=> {
+                  return <span key={index} style={{ color: part.text_color.hex_string, backgroundColor: part.background_color.hex_string }}>{ part.input_value }</span>
+                })
+              }
+            </div>
           </div>
         </div>
       </div>
@@ -17,7 +23,7 @@ const TerminalPresenter = (props) => {
 }
 
 TerminalPresenter.propTypes = {
-  listItems: PropTypes.array.isRequired
+  parts: PropTypes.array.isRequired
 }
 
 export default TerminalPresenter;

@@ -3,7 +3,7 @@ import TerminalPresenter from '../presenters/terminal';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    listItems: state.creator.listItems || []
+    parts: state.terminal.parts || []
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

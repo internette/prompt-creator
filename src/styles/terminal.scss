@@ -18,4 +18,10 @@
 #content-container {
   height: 100%;
   background-color: $violet;
+  #content {
+    margin: 1rem;
+    color: hotpink;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+  }
 }
