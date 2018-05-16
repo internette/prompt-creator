@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ColorButtonPresenter from '../presenters/color-button';
-import { toggleTextPalette, toggleBGPalette } from '../actions';
+import { togglePalette } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -11,11 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     togglePalette: (subject, toggle_state)=> {
-      if(subject === 'background'){
-        dispatch(toggleBGPalette(!toggle_state))
-      } else {
-        dispatch(toggleTextPalette(!toggle_state))
-      }
+      dispatch(togglePalette(subject, !toggle_state))
     }
   }
 }

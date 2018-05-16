@@ -14,7 +14,7 @@ const AddInputPresenter = (props) => {
             return props.updateValue(e.target.value);
           }}/>
           <ColorButton subject="text" toggle_state={ props.text_btn_toggle }/>
-          <ColorButton subject="background" toggle_state={ props.bg_btn_toggle }/>
+          <ColorButton subject="background" toggle_state={ props.background_btn_toggle }/>
         </div>
       </div>
       <button id="add-color">+</button>
@@ -27,7 +27,7 @@ AddInputPresenter.propTypes = {
   text_color: PropTypes.object.isRequired,
   background_color: PropTypes.object.isRequired,
   text_btn_toggle: PropTypes.bool.isRequired,
-  bg_btn_toggle: PropTypes.bool.isRequired,
+  background_btn_toggle: PropTypes.bool.isRequired,
   updateValue: PropTypes.func.isRequired
 }
 
