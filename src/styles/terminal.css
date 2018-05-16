@@ -19,4 +19,6 @@
     margin: 1rem;
     color: hotpink;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.8rem; }
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 600; }

@@ -5,6 +5,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     is_editing: ownProps.attributes.is_editing,
     input_value: ownProps.attributes.input_value,
+    icon_theme: ownProps.attributes.icon_theme,
     text_color: ownProps.attributes.text_color,
     background_color: ownProps.attributes.background_color,
     text_btn_toggle: ownProps.attributes.text_btn_toggle,

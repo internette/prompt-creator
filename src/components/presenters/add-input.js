@@ -27,6 +27,7 @@ const AddInputPresenter = (props) => {
 }
 
 AddInputPresenter.propTypes = {
+  button_view: PropTypes.string.isRequired,
   input_value: PropTypes.string.isRequired,
   text_color: PropTypes.object.isRequired,
   background_color: PropTypes.object.isRequired,

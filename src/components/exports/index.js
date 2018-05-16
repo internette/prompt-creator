@@ -2,66 +2,82 @@ export const colors = [
   {
     color_id: '000',
     hex_string: "#000000",
-    name: "Black"
+    name: "Black",
+    icon_color: 'light'
   },{
     color_id: '001',
     hex_string: "#800000",
-    name: "Maroon"
+    name: "Maroon",
+    icon_color: 'light'
   }, {
     color_id: '002',
     hex_string: "#008000",
-    name: "Green"
+    name: "Green",
+    icon_color: 'light'
   }, {
     color_id: '003',
     hex_string: "#808000",
-    name: "Olive"
+    name: "Olive",
+    icon_color: 'light'
   }, {
     color_id: '004',
     hex_string: "#000080",
-    name: "Navy"
+    name: "Navy",
+    icon_color: 'light'
   }, {
     color_id: '005',
     hex_string: "#800080",
-    name: "Purple"
+    name: "Purple",
+    icon_color: 'light'
   }, {
     color_id: '006',
     hex_string: "#008080",
-    name: "Teal"
+    name: "Teal",
+    icon_color: 'light'
   }, {
     color_id: '007',
     hex_string: "#c0c0c0",
-    name: "Silver"
+    name: "Silver",
+    icon_color: 'dark'
   }, {
     color_id: '008',
     hex_string: "#808080",
-    name: "Grey"
+    name: "Grey",
+    icon_color: 'light'
   }, {
     color_id: '009',
     hex_string: "#ff0000",
-    name: "Red"
+    name: "Red",
+    icon_color: 'light'
   }, {
     color_id: '010',
     hex_string: "#00ff00",
-    name: "Lime"
+    name: "Lime",
+    icon_color: 'dark'
   }, {
     color_id: '011',
     hex_string: "#ffff00",
-    name: "Yellow"
+    name: "Yellow",
+    icon_color: 'dark'
   }, {
     color_id: '012',
     hex_string: "#0000ff",
-    name: "Blue"
+    name: "Blue",
+    icon_color: 'light'
   }, {
     color_id: '013',
     hex_string: "#ff00ff",
-    name: "Fuchsia"
+    name: "Fuchsia",
+    icon_color: 'dark'
   }, {
     color_id: '014',
     hex_string: "#00ffff",
-    name: "Aqua"
+    name: "Aqua",
+    icon_color: 'dark'
   }, {
     color_id: '015',
     hex_string: "#ffffff",
-    name: "White"
+    name: "White",
+    icon_color: 'dark'
   },
 ]

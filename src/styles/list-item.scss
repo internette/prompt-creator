@@ -1,8 +1,32 @@
 @import 'colors';
 .list-item {
-  padding: 1rem;
   border-bottom: 1px solid $peach;
   &:last-child {
     border-bottom: unset;
+  }
+  .input-container {
+    display: flex;
+    padding: 1rem;
+  }
+  span {
+    flex-grow: 2;
+  }
+  button { 
+    border: 0;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    background-size: cover;
+    opacity: 0.5;
+    transition: 0.2s;
+    &.light {
+      background-image: url('../assets/edit-white.png');
+    }
+    &.dark {
+      background-image: url('../assets/edit-black.png');
+    }
+    &:hover {
+      opacity: 1;
+    }
   }
 }

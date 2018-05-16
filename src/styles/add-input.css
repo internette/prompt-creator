@@ -26,7 +26,8 @@
         padding: 0.5rem 0.75rem;
         border-left: 1px solid gainsboro;
         text-align: center;
-        position: relative; }
+        position: relative;
+        height: 100%; }
         #add-item #input-container button.input-button span.bg {
           display: inline-block;
           width: 0.75rem;

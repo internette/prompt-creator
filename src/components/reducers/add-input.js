@@ -1,4 +1,4 @@
-const add_input = (state = { text_color: { color_id: '000', hex_string: "#000000", name: "Black" }, background_color: { color_id: '015', hex_string: "#FFFFFF", name: "White" }, text_btn_toggle: false, background_btn_toggle: false }, action)=> {
+const add_input = (state = { icon_theme: 'light', text_color: { color_id: '000', hex_string: "#000000", name: "Black" }, background_color: { color_id: '015', hex_string: "#FFFFFF", name: "White" }, text_btn_toggle: false, background_btn_toggle: false }, action)=> {
   switch (action.type){
     case 'set-palette-toggle':
       const palette_obj = {};
