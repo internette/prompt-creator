@@ -1,7 +1,7 @@
 .list-item {
   border-bottom: 1px solid #F3A183; }
-  .list-item:last-child {
-    border-bottom: unset; }
+  .list-item:first-child {
+    border-top: 1px solid #F3A183; }
   .list-item .input-container {
     display: flex;
     padding: 1rem; }
