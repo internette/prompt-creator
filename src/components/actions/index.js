@@ -9,3 +9,7 @@ export function toggleTextPalette(text_btn_toggle) {
 export function toggleBGPalette(bg_btn_toggle) {
   return { type: 'set-background-palette-toggle', bg_btn_toggle: (/true/i.test(bg_btn_toggle)) }
 }
+
+export function setColor(subject, color_obj) {
+  return { type: 'set-color', subject: subject, color_obj: color_obj }
+}

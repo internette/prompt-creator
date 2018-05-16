@@ -1,67 +1,67 @@
 export const colors = [
   {
-    colorId: '000',
-    hexString: "#000000",
+    color_id: '000',
+    hex_string: "#000000",
     name: "Black"
   },{
-    colorId: '001',
-    hexString: "#800000",
+    color_id: '001',
+    hex_string: "#800000",
     name: "Maroon"
   }, {
-    colorId: '002',
-    hexString: "#008000",
+    color_id: '002',
+    hex_string: "#008000",
     name: "Green"
   }, {
-    colorId: '003',
-    hexString: "#808000",
+    color_id: '003',
+    hex_string: "#808000",
     name: "Olive"
   }, {
-    colorId: '004',
-    hexString: "#000080",
+    color_id: '004',
+    hex_string: "#000080",
     name: "Navy"
   }, {
-    colorId: '005',
-    hexString: "#800080",
+    color_id: '005',
+    hex_string: "#800080",
     name: "Purple"
   }, {
-    colorId: '006',
-    hexString: "#008080",
+    color_id: '006',
+    hex_string: "#008080",
     name: "Teal"
   }, {
-    colorId: '007',
-    hexString: "#c0c0c0",
+    color_id: '007',
+    hex_string: "#c0c0c0",
     name: "Silver"
   }, {
-    colorId: '008',
-    hexString: "#808080",
+    color_id: '008',
+    hex_string: "#808080",
     name: "Grey"
   }, {
-    colorId: '009',
-    hexString: "#ff0000",
+    color_id: '009',
+    hex_string: "#ff0000",
     name: "Red"
   }, {
-    colorId: '010',
-    hexString: "#00ff00",
+    color_id: '010',
+    hex_string: "#00ff00",
     name: "Lime"
   }, {
-    colorId: '011',
-    hexString: "#ffff00",
+    color_id: '011',
+    hex_string: "#ffff00",
     name: "Yellow"
   }, {
-    colorId: '012',
-    hexString: "#0000ff",
+    color_id: '012',
+    hex_string: "#0000ff",
     name: "Blue"
   }, {
-    colorId: '013',
-    hexString: "#ff00ff",
+    color_id: '013',
+    hex_string: "#ff00ff",
     name: "Fuchsia"
   }, {
-    colorId: '014',
-    hexString: "#00ffff",
+    color_id: '014',
+    hex_string: "#00ffff",
     name: "Aqua"
   }, {
-    colorId: '015',
-    hexString: "#ffffff",
+    color_id: '015',
+    hex_string: "#ffffff",
     name: "White"
   },
 ]

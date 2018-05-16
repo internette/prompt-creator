@@ -10,7 +10,7 @@ const AddInputPresenter = (props) => {
     <div id="add-item">
       <div>
         <div id="input-container">
-          <input type="text" id="new-color-value" onChange={(e)=> {
+          <input type="text" id="new-color-value" style={{ color: props.text_color.hex_string, backgroundColor: props.background_color.hex_string }} onChange={(e)=> {
             return props.updateValue(e.target.value);
           }}/>
           <ColorButton subject="text" toggle_state={ props.text_btn_toggle }/>
@@ -24,8 +24,8 @@ const AddInputPresenter = (props) => {
 
 AddInputPresenter.propTypes = {
   input_value: PropTypes.string.isRequired,
-  text_color: PropTypes.string.isRequired,
-  bg_color: PropTypes.string.isRequired,
+  text_color: PropTypes.object.isRequired,
+  background_color: PropTypes.object.isRequired,
   text_btn_toggle: PropTypes.bool.isRequired,
   bg_btn_toggle: PropTypes.bool.isRequired,
   updateValue: PropTypes.func.isRequired

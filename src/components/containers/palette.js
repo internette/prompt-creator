@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { colors } from '../exports';
 import PalettePresenter from '../presenters/palette';
 
+import { setColor } from '../actions';
+
 const mapStateToProps = (state, ownProps) => {
   return {
     colors: colors || [],
@@ -12,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     changeColor: (subject, color)=> {
-
+      dispatch(setColor(subject, color))
     }
   }
 }

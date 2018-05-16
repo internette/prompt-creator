@@ -9,8 +9,8 @@ const PalettePresenter = (props) => {
         {  
           props.colors.map( (color, index)=> {
             return <button key={ index } onClick={ ()=> {
-              props.changeColor( props.subject, color );
-            }}><span style={{ backgroundColor: color.hexString }}></span></button>
+              return props.changeColor( props.subject, color );
+            }}><span style={{ backgroundColor: color.hex_string }}></span></button>
           })
         }
       </div>
