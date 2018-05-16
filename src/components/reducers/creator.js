@@ -1,8 +1,8 @@
-const creator = (state = {}, action)=> {
+const creator = (state = { parts: [] }, action)=> {
   switch (action.type){
-    case 'get-items':
+    case 'add-item':
       return Object.assign({}, state, {
-        items: []
+        parts: []
       })
     default:
       return state
