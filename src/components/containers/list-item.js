@@ -1,0 +1,24 @@
+import { connect } from 'react-redux';
+import ListItemPresenter from '../presenters/list-item';
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    is_editing: ownProps.attributes.is_editing,
+    input_value: ownProps.attributes.input_value,
+    text_color: ownProps.attributes.text_color,
+    background_color: ownProps.attributes.background_color,
+    text_btn_toggle: ownProps.attributes.text_btn_toggle,
+    background_btn_toggle: ownProps.attributes.background_btn_toggle,
+  }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    editItem: (subject, color)=> {
+      
+    }
+  }
+}
+
+const ListItem = connect(mapStateToProps,mapDispatchToProps)(ListItemPresenter);
+
+export default ListItem;

@@ -3,17 +3,10 @@ import CreatorPresenter from '../presenters/creator';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    listItems: state.creator.listItems || []
-  }
-}
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    test: ()=> {
-
-    }
+    list_items: state.creator.parts || []
   }
 }
 
-const Creator = connect(mapStateToProps,mapDispatchToProps)(CreatorPresenter);
+const Creator = connect(mapStateToProps)(CreatorPresenter);
 
 export default Creator;

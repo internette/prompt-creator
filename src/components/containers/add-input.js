@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import AddInputPresenter from '../presenters/add-input';
 
+import { addItem, updateValue } from '../actions';
+
 const mapStateToProps = (state, ownProps) => {
   return {
     input_value: state.add_input.input_value || '',
@@ -13,7 +15,10 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     addItem: (props)=> {
-
+      dispatch(addItem(props))
+    },
+    updateValue: (new_value)=> {
+      dispatch(updateValue(new_value))
     }
   }
 }
