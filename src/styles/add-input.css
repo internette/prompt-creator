@@ -14,11 +14,16 @@
       flex-grow: 2;
       border: 0;
       background: transparent;
-      padding: 0.5rem 1rem; }
+      padding: 0.5rem 1rem;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem; }
       #add-item #input-container input:focus {
         outline: none; }
     #add-item #input-container .input-button-container {
       position: relative; }
+      #add-item #input-container .input-button-container:last-child button {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem; }
     #add-item #input-container button {
       border: 0; }
       #add-item #input-container button.input-button {

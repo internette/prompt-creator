@@ -17,12 +17,18 @@
       border: 0;
       background: transparent;
       padding: 0.5rem 1rem;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
       &:focus {
         outline: none;
       }
     }
     .input-button-container {
       position: relative;
+      &:last-child button {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
     }
     button {
       border: 0;
