@@ -9,6 +9,10 @@ const add_input = (state = { icon_theme: 'light', text_color: { color_id: '000',
       add_item_obj[action.subject+'_color'] = action.color_obj;
       add_item_obj[action.subject+'_btn_toggle'] = false;
       return Object.assign({}, state, add_item_obj)
+    case 'edit-item':
+      return Object.assign({}, state, {
+        button_view: action.button_view
+      })
     case 'update-value':
       return Object.assign({}, state, {
         input_value: action.new_value

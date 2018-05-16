@@ -15,13 +15,13 @@ const AddInputPresenter = (props) => {
           <ColorButton subject="background" toggle_state={ props.background_btn_toggle }/>
         </div>
       </div>
-      <button id="add-color" onClick={ ()=> { return props.addItem({
+      <button id={ props.button_view === 'add' ? "add-color" : "edit-color" } onClick={ ()=> { return props.addItem({
         input_value: props.input_value,
         text_color: props.text_color,
         background_color: props.background_color,
         text_btn_toggle: props.text_btn_toggle,
         background_btn_toggle: props.background_btn_toggle
-      }) } }>+</button>
+      }) } }>{ props.button_view === 'add' ? '+' : '√' }</button>
     </div>
   );
 }

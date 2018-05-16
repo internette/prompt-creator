@@ -6,6 +6,10 @@ export function removeItem(item_to_remove) {
   return { type: 'remove-item', item_to_remove: item_to_remove }
 }
 
+export function editItem(item_to_edit, button_view) {
+  return { type: 'edit-item', item_to_edit: item_to_edit, button_view: button_view }
+}
+
 export function updateValue(new_value) {
   return { type: 'update-value', new_value: new_value }
 }

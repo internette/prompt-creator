@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ListItemPresenter from '../presenters/list-item';
 
-import { removeItem } from '../actions';
+import { editItem, removeItem } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -16,8 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    editItem: (subject, color)=> {
-      
+    editItem: ()=> {
+      dispatch(editItem(ownProps.attributes, 'edit'))
     },
     removeItem: () => {
       dispatch(removeItem(ownProps.attributes))
