@@ -19,11 +19,22 @@
     background-size: cover;
     opacity: 0.5;
     transition: 0.2s;
+    font-size: 1.25rem;
+    line-height: 0;
+    &:last-child {
+      margin-left: 0.5rem;
+    }
     &.light {
-      background-image: url('../assets/edit-white.png');
+      color: white;
+      &:first-of-type {
+        background-image: url('../assets/edit-white.png');
+      }
     }
     &.dark {
-      background-image: url('../assets/edit-black.png');
+      color: black;
+      &:first-of-type {
+        background-image: url('../assets/edit-black.png');
+      }
     }
     &:hover {
       opacity: 1;

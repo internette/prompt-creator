@@ -14,7 +14,7 @@ const TerminalPresenter = (props) => {
                 props.parts.map((part, index)=> {
                   return <span key={index} style={{ color: part.text_color.hex_string, backgroundColor: part.background_color.hex_string }}>{ part.input_value }</span>
                 })
-              }
+              }&nbsp;cd ..
             </div>
           </div>
         </div>

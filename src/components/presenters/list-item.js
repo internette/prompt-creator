@@ -10,6 +10,9 @@ const ListItemPresenter = (props) => {
       <div className="input-container">
         { child_view }
         <button className={ props.icon_theme } onClick={()=> { props.editItem(props) }}></button>
+        <button className={ props.icon_theme } onClick={()=> {
+          props.removeItem();
+        }}>&times;</button>
       </div>
     </li>
   );

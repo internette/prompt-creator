@@ -14,10 +14,18 @@
     padding: 0;
     background-size: cover;
     opacity: 0.5;
-    transition: 0.2s; }
+    transition: 0.2s;
+    font-size: 1.25rem;
+    line-height: 0; }
+    .list-item button:last-child {
+      margin-left: 0.5rem; }
     .list-item button.light {
-      background-image: url("../assets/edit-white.png"); }
+      color: white; }
+      .list-item button.light:first-of-type {
+        background-image: url("../assets/edit-white.png"); }
     .list-item button.dark {
-      background-image: url("../assets/edit-black.png"); }
+      color: black; }
+      .list-item button.dark:first-of-type {
+        background-image: url("../assets/edit-black.png"); }
     .list-item button:hover {
       opacity: 1; }
