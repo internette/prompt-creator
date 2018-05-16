@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import ListItemPresenter from '../presenters/list-item';
 
+import { removeItem } from '../actions';
+
 const mapStateToProps = (state, ownProps) => {
   return {
     is_editing: ownProps.attributes.is_editing,
@@ -16,6 +18,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     editItem: (subject, color)=> {
       
+    },
+    removeItem: () => {
+      dispatch(removeItem(ownProps.attributes))
     }
   }
 }

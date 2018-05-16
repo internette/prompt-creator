@@ -25,10 +25,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
           return color_obj
         }
       })[0].icon_color;
-      dispatch(addItem(props))
+      return dispatch(addItem(props))
     },
     updateValue: (new_value)=> {
-      dispatch(updateValue(new_value))
+      return dispatch(updateValue(new_value))
     }
   }
 }

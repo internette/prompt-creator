@@ -9,10 +9,8 @@ const ListItemPresenter = (props) => {
     <li className="list-item" style={{ color: props.text_color.hex_string, backgroundColor: props.background_color.hex_string }}>
       <div className="input-container">
         { child_view }
-        <button className={ props.icon_theme } onClick={()=> { props.editItem(props) }}></button>
-        <button className={ props.icon_theme } onClick={()=> {
-          props.removeItem();
-        }}>&times;</button>
+        <button className={ props.icon_theme } onClick={ props.editItem }></button>
+        <button className={ props.icon_theme } onClick={ props.removeItem }>&times;</button>
       </div>
     </li>
   );
@@ -26,7 +24,8 @@ ListItemPresenter.propTypes = {
   background_color: PropTypes.object.isRequired,
   text_btn_toggle: PropTypes.bool.isRequired,
   background_btn_toggle: PropTypes.bool.isRequired,
-  editItem: PropTypes.func.isRequired
+  editItem: PropTypes.func.isRequired,
+  removeItem: PropTypes.func.isRequired
 }
 
 export default ListItemPresenter;
