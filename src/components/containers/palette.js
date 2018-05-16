@@ -4,12 +4,14 @@ import PalettePresenter from '../presenters/palette';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    colors: colors || []
+    colors: colors || [],
+    subject: ownProps.subject,
+    toggle_state: ownProps.toggle_state
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    changeColor: ()=> {
+    changeColor: (subject, color)=> {
 
     }
   }

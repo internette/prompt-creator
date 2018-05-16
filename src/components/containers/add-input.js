@@ -5,7 +5,9 @@ const mapStateToProps = (state, ownProps) => {
   return {
     input_value: state.add_input.input_value || '',
     text_color: state.add_input.text_color || '',
-    bg_color: state.add_input.bg_color || ''
+    bg_color: state.add_input.bg_color || '',
+    text_btn_toggle: state.add_input.text_btn_toggle || false,
+    bg_btn_toggle: state.add_input.bg_btn_toggle || false,
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

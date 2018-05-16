@@ -5,11 +5,11 @@ import '../../styles/palette.css';
 
 const PalettePresenter = (props) => {
   return (
-    <div className="palette">
+    <div className={ props.toggle_state ? 'active palette' : 'palette' }>
         {  
           props.colors.map( (color, index)=> {
             return <button key={ index } onClick={ ()=> {
-              props.changeColor();
+              props.changeColor( props.subject, color );
             }}><span style={{ backgroundColor: color.hexString }}></span></button>
           })
         }
@@ -18,7 +18,9 @@ const PalettePresenter = (props) => {
 }
 
 PalettePresenter.propTypes = {
+  toggle_state: PropTypes.bool.isRequired,
   colors: PropTypes.array.isRequired,
+  subject: PropTypes.string.isRequired,
   changeColor: PropTypes.func.isRequired
 }
 
