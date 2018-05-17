@@ -28,25 +28,29 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
+  function resetAddInput(){
+    dispatch(updateValue(''))
+    var text_color_obj = colors.filter((color)=> {
+      if(/black/i.test(color.name)){
+        return color
+      }
+    })[0];
+    dispatch(setColor('text', text_color_obj))
+    var bg_color_obj = colors.filter((color)=> {
+      if(/white/i.test(color.name)){
+        return color
+      }
+    })[0];
+    dispatch(setColor('background', bg_color_obj))
+  }
   return {
     addItem: (props)=> {
-      dispatch(addItem(updateIconTheme(props)))
-      dispatch(updateValue(''))
-      var text_color_obj = colors.filter((color)=> {
-        if(/black/i.test(color.name)){
-          return color
-        }
-      })[0];
-      dispatch(setColor('text', text_color_obj))
-      var bg_color_obj = colors.filter((color)=> {
-        if(/white/i.test(color.name)){
-          return color
-        }
-      })[0];
-      dispatch(setColor('background', bg_color_obj))
+      dispatch(addItem(updateIconTheme(props)));
+      return resetAddInput();
     },
     updateItem: (props)=> {
-      return dispatch(updateItem(updateIconTheme(props)));
+      dispatch(updateItem(updateIconTheme(props)));
+      return resetAddInput();
     },
     updateValue: (existing_value, char_to_add)=> {
       if(char_to_add.length === 1) {
