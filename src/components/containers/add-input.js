@@ -4,10 +4,11 @@ import { colors } from '../exports';
 
 import AddInputPresenter from '../presenters/add-input';
 
-import { addItem, updateValue, setColor } from '../actions';
+import { addItem, updateItem, updateValue, setColor } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    id: state.creator.parts.length || 0,
     button_view: state.add_input.button_view || 'add',
     input_value: state.add_input.input_value || '',
     icon_theme: state.add_input.icon_theme || 'light',
@@ -39,6 +40,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         }
       })[0];
       dispatch(setColor('background', bg_color_obj))
+    },
+    updateItem: (props)=> {
+      return dispatch(updateItem(props));
     },
     updateValue: (existing_value, char_to_add)=> {
       if(char_to_add.length === 1) {

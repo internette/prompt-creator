@@ -18,6 +18,7 @@ const AddInputPresenter = (props) => {
       <button id={ props.button_view === 'add' ? "add-color" : "edit-color" } onClick={ ()=> {
         if(props.button_view === 'add'){
           return props.addItem({
+            id: props.id,
             input_value: props.input_value,
             text_color: props.text_color,
             background_color: props.background_color,
@@ -25,7 +26,8 @@ const AddInputPresenter = (props) => {
             background_btn_toggle: props.background_btn_toggle
           })
         } else {
-          return props.editItem({
+          return props.updateItem({
+            id: props.id,
             input_value: props.input_value,
             text_color: props.text_color,
             background_color: props.background_color,
@@ -39,6 +41,7 @@ const AddInputPresenter = (props) => {
 }
 
 AddInputPresenter.propTypes = {
+  id: PropTypes.number.isRequired,
   button_view: PropTypes.string.isRequired,
   input_value: PropTypes.string.isRequired,
   text_color: PropTypes.object.isRequired,
