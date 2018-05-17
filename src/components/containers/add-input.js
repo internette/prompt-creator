@@ -41,17 +41,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(setColor('background', bg_color_obj))
     },
     updateValue: (existing_value, char_to_add)=> {
-      const alpha_numeric_check = [/shift/i, /control/i, /alt/i, /enter/i].filter((val_to_check_against)=>{
-        if (val_to_check_against.test(char_to_add)){
-          return char_to_add;
-        }
-      });
-      if(alpha_numeric_check.length === 0) {
-        if(/backspace/i.test(char_to_add)){
-          return dispatch(updateValue(existing_value.substring(0, existing_value.length-1)))
-        } else {
-          return dispatch(updateValue(existing_value + char_to_add))
-        }
+      if(char_to_add.length === 1) {
+        return dispatch(updateValue(existing_value + char_to_add))
+      } else if(/backspace/i.test(char_to_add)){
+        return dispatch(updateValue(existing_value.substring(0, existing_value.length-1)))
       }
     }
   }
