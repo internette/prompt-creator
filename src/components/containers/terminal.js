@@ -6,14 +6,7 @@ const mapStateToProps = (state, ownProps) => {
     parts: state.terminal.parts || []
   }
 }
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    test: ()=> {
 
-    }
-  }
-}
-
-const Terminal = connect(mapStateToProps,mapDispatchToProps)(TerminalPresenter);
+const Terminal = connect(mapStateToProps)(TerminalPresenter);
 
 export default Terminal;
