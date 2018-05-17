@@ -6,6 +6,15 @@ import AddInputPresenter from '../presenters/add-input';
 
 import { addItem, updateItem, updateValue, setColor } from '../actions';
 
+function updateIconTheme(props){
+  props['icon_theme'] = colors.filter((color_obj)=> {
+    if(color_obj.hex_string.toLowerCase() === props.background_color.hex_string.toLowerCase()){
+      return color_obj
+    }
+  })[0].icon_color;
+  return props;
+}
+
 const mapStateToProps = (state, ownProps) => {
   return {
     id: state.add_input.id || 0,
@@ -21,12 +30,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     addItem: (props)=> {
-      props['icon_theme'] = colors.filter((color_obj)=> {
-        if(color_obj.hex_string.toLowerCase() === props.background_color.hex_string.toLowerCase()){
-          return color_obj
-        }
-      })[0].icon_color;
-      dispatch(addItem(props))
+      dispatch(addItem(updateIconTheme(props)))
       dispatch(updateValue(''))
       var text_color_obj = colors.filter((color)=> {
         if(/black/i.test(color.name)){
@@ -42,12 +46,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(setColor('background', bg_color_obj))
     },
     updateItem: (props)=> {
-      props['icon_theme'] = colors.filter((color_obj)=> {
-        if(color_obj.hex_string.toLowerCase() === props.background_color.hex_string.toLowerCase()){
-          return color_obj
-        }
-      })[0].icon_color;
-      return dispatch(updateItem(props));
+      return dispatch(updateItem(updateIconTheme(props)));
     },
     updateValue: (existing_value, char_to_add)=> {
       if(char_to_add.length === 1) {
