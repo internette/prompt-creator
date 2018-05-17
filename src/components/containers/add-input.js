@@ -42,7 +42,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(setColor('background', bg_color_obj))
     },
     updateItem: (props)=> {
-      console.log(ownProps)
+      props['icon_theme'] = colors.filter((color_obj)=> {
+        if(color_obj.hex_string.toLowerCase() === props.background_color.hex_string.toLowerCase()){
+          return color_obj
+        }
+      })[0].icon_color;
       return dispatch(updateItem(props));
     },
     updateValue: (existing_value, char_to_add)=> {
