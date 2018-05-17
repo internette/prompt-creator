@@ -1,6 +1,8 @@
 #creator {
   width: 40%;
-  background-color: white; }
+  background-color: white;
+  display: flex;
+  flex-direction: column; }
   #creator h1 {
     margin: 0;
     padding: 1rem;
@@ -9,7 +11,9 @@
     font-weight: 300;
     font-size: 1.75rem;
     letter-spacing: 0.4px;
-    display: flex; }
+    display: flex;
+    align-self: flex-start;
+    width: 100%; }
     #creator h1 span {
       flex-grow: 2; }
     #creator h1 button {
@@ -33,7 +37,14 @@
         margin-left: 0.5rem; }
       #creator h1 button:hover {
         background-color: #2c2656; }
-  #creator ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
+  #creator #bash-list-container {
+    width: 100%;
+    flex-grow: 2;
+    overflow-x: hidden;
+    overflow-y: auto; }
+    #creator #bash-list-container ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+  #creator #add-item {
+    width: 100%; }

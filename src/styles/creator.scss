@@ -2,6 +2,8 @@
 #creator {
   width: 40%;
   background-color: white;
+  display: flex;
+  flex-direction: column;
   h1 {
     margin: 0;
     padding: 1rem;
@@ -11,6 +13,8 @@
     font-size: 1.75rem;
     letter-spacing: 0.4px;
     display: flex;
+    align-self: flex-start;
+    width: 100%;
     span {
       flex-grow: 2;
     }
@@ -51,9 +55,18 @@
       }
     }
   }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  #bash-list-container {
+    width: 100%;
+    flex-grow: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  #add-item {
+    width: 100%;
   }
 }
