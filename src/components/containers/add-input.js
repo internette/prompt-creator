@@ -4,7 +4,7 @@ import { colors } from '../exports';
 
 import AddInputPresenter from '../presenters/add-input';
 
-import { addItem, updateValue } from '../actions';
+import { addItem, updateValue, setColor } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -25,10 +25,34 @@ const mapDispatchToProps = (dispatch, ownProps) => {
           return color_obj
         }
       })[0].icon_color;
-      return dispatch(addItem(props))
+      dispatch(addItem(props))
+      dispatch(updateValue(''))
+      var text_color_obj = colors.filter((color)=> {
+        if(/black/i.test(color.name)){
+          return color
+        }
+      })[0];
+      dispatch(setColor('text', text_color_obj))
+      var bg_color_obj = colors.filter((color)=> {
+        if(/white/i.test(color.name)){
+          return color
+        }
+      })[0];
+      dispatch(setColor('background', bg_color_obj))
     },
-    updateValue: (new_value)=> {
-      return dispatch(updateValue(new_value))
+    updateValue: (existing_value, char_to_add)=> {
+      const alpha_numeric_check = [/shift/i, /control/i, /alt/i, /enter/i].filter((val_to_check_against)=>{
+        if (val_to_check_against.test(char_to_add)){
+          return char_to_add;
+        }
+      });
+      if(alpha_numeric_check.length === 0) {
+        if(/backspace/i.test(char_to_add)){
+          return dispatch(updateValue(existing_value.substring(0, existing_value.length-1)))
+        } else {
+          return dispatch(updateValue(existing_value + char_to_add))
+        }
+      }
     }
   }
 }
