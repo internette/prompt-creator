@@ -8,7 +8,7 @@ import { addItem, updateItem, updateValue, setColor } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    id: state.creator.parts.length - 1 || 0,
+    id: state.add_input.id || 0,
     button_view: state.add_input.button_view || 'add',
     input_value: state.add_input.input_value || '',
     icon_theme: state.add_input.icon_theme || 'light',
@@ -42,6 +42,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(setColor('background', bg_color_obj))
     },
     updateItem: (props)=> {
+      console.log(ownProps)
       return dispatch(updateItem(props));
     },
     updateValue: (existing_value, char_to_add)=> {

@@ -5,6 +5,7 @@ import { editItem, removeItem } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    id: ownProps.attributes.id,
     is_editing: ownProps.attributes.is_editing,
     input_value: ownProps.attributes.input_value,
     icon_theme: ownProps.attributes.icon_theme,

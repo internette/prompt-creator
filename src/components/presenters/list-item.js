@@ -17,6 +17,7 @@ const ListItemPresenter = (props) => {
 }
 
 ListItemPresenter.propTypes = {
+  id: PropTypes.number.isRequired,
   is_editing: PropTypes.bool.isRequired,
   input_value: PropTypes.string.isRequired,
   icon_theme: PropTypes.string.isRequired,
