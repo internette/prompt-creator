@@ -8,7 +8,7 @@ import { addItem, updateItem, updateValue, setColor } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    id: state.creator.parts.length || 0,
+    id: state.creator.parts.length - 1 || 0,
     button_view: state.add_input.button_view || 'add',
     input_value: state.add_input.input_value || '',
     icon_theme: state.add_input.icon_theme || 'light',
