@@ -22,7 +22,7 @@ const terminal = (state = { parts: [] }, action)=> {
         })
       });
       return Object.assign({}, state, {
-        parts: parts
+        parts: without_removed_item
       });
     default:
       return state

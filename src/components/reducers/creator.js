@@ -19,7 +19,7 @@ const creator = (state = { parts: [] }, action)=> {
         parts: updated_parts
       })
     case 'remove-item':
-      let without_removed_item = state.parts.filter((part)=> {
+      const without_removed_item = state.parts.filter((part)=> {
         if(part.id !== action.item_to_remove.id){
           return part
         }
@@ -29,7 +29,7 @@ const creator = (state = { parts: [] }, action)=> {
         })
       });
       return Object.assign({}, state, {
-        parts: state.parts
+        parts: without_removed_item
       });
     default:
       return state

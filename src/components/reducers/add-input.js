@@ -16,7 +16,7 @@ const add_input = (state = { icon_theme: 'light', text_color: { color_id: '000',
         input_value: action.item_to_edit.input_value,
         text_color: action.item_to_edit.text_color,
         background_color: action.item_to_edit.background_color
-      })
+      });
     case 'update-value':
       return Object.assign({}, state, {
         input_value: action.new_value
