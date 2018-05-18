@@ -10,7 +10,9 @@ function updateIconTheme(props){
   return Object.assign({}, props, {
     icon_theme: colors.filter((color_obj)=> {
       if(color_obj.hex_string.toLowerCase() === props.background_color.hex_string.toLowerCase()){
-        return color_obj
+        return color_obj;
+      } else {
+        return undefined;
       }
     })[0].icon_color
   });
@@ -33,13 +35,17 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     dispatch(updateValue(''))
     var text_color_obj = colors.filter((color)=> {
       if(/black/i.test(color.name)){
-        return color
+        return color;
+      } else {
+        return undefined;
       }
     })[0];
     dispatch(setColor('text', text_color_obj))
     var bg_color_obj = colors.filter((color)=> {
       if(/white/i.test(color.name)){
-        return color
+        return color;
+      } else {
+        return undefined;
       }
     })[0];
     dispatch(setColor('background', bg_color_obj))

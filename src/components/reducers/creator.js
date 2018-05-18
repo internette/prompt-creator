@@ -12,7 +12,7 @@ const creator = (state = { parts: [] }, action)=> {
         if(part.id === action.item_to_update.id) {
           return Object.assign({}, part, action.item_to_update);
         } else {
-          return part
+          return part;
         }
       });
       return Object.assign({}, state, {
@@ -21,7 +21,9 @@ const creator = (state = { parts: [] }, action)=> {
     case 'remove-item':
       const without_removed_item = state.parts.filter((part)=> {
         if(part.id !== action.item_to_remove.id){
-          return part
+          return part;
+        } else {
+          return undefined;
         }
       }).map((part, index)=> {
         return Object.assign({}, part, {
