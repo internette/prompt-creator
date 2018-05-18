@@ -9,7 +9,9 @@ import '../../styles/creator.css';
 const CreatorPresenter = (props) => {
   return (
     <div id="creator">
-      <h1><span>Prompt Creator</span><button id="get-code">&lt;/&gt;</button><button id="how-to">?</button></h1>
+      <h1><span>Prompt Creator</span><button id="get-code" onClick={ ()=> {
+        return props.toggleCodeVisibility(props.toggle_state)
+      }}>&lt;/&gt;</button><button id="how-to">?</button></h1>
       <div id="bash-list-container">
         <ul id="bash-list-items">
           {
@@ -25,7 +27,8 @@ const CreatorPresenter = (props) => {
 }
 
 CreatorPresenter.propTypes = {
-  list_items: PropTypes.array.isRequired
+  list_items: PropTypes.array.isRequired,
+  toggleCodeVisibility: PropTypes.func.isRequired
 }
 
 export default CreatorPresenter;

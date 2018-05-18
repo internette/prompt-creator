@@ -25,3 +25,7 @@ export function togglePalette(subject, btn_toggle) {
 export function setColor(subject, color_obj) {
   return { type: 'set-color', subject: subject, color_obj: color_obj }
 }
+
+export function toggleCodeVisibility(toggle_state) {
+  return { type: 'toggle-code-visibility', toggle_state: toggle_state }
+}

@@ -13,6 +13,9 @@ const prompt_code = (state = { parts: [], prompt: '', toggle_state: false }, act
     case 'update-item':
     case 'remove-item':
     case 'toggle-code-visibility':
+      return Object.assign({}, state, {
+        toggle_state: action.toggle_state
+      })
     default:
       return state
   }

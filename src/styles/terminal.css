@@ -1,5 +1,6 @@
 #bash-prompt {
-  width: 60%; }
+  width: 60%;
+  position: relative; }
   #bash-prompt #bash-prompt-content {
     display: flex;
     height: 100%;

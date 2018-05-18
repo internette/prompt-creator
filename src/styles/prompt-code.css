@@ -1,0 +1,9 @@
+.prompt {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s; }
+  .prompt.active {
+    height: 100%; }
