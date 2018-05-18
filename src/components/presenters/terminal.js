@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import PromptCode from '../containers/prompt-code'
+
 import '../../styles/terminal.css';
 
 const TerminalPresenter = (props) => {
@@ -18,6 +20,7 @@ const TerminalPresenter = (props) => {
             </div>
           </div>
         </div>
+        <PromptCode/>
       </div>
   );
 }
