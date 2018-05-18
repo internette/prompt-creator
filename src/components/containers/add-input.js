@@ -7,12 +7,13 @@ import AddInputPresenter from '../presenters/add-input';
 import { addItem, updateItem, updateValue, setColor } from '../actions';
 
 function updateIconTheme(props){
-  props['icon_theme'] = colors.filter((color_obj)=> {
-    if(color_obj.hex_string.toLowerCase() === props.background_color.hex_string.toLowerCase()){
-      return color_obj
-    }
-  })[0].icon_color;
-  return props;
+  return Object.assign({}, props, {
+    icon_theme: colors.filter((color_obj)=> {
+      if(color_obj.hex_string.toLowerCase() === props.background_color.hex_string.toLowerCase()){
+        return color_obj
+      }
+    })[0].icon_color
+  });
 }
 
 const mapStateToProps = (state, ownProps) => {
@@ -52,11 +53,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(updateItem(updateIconTheme(props)));
       return resetAddInput();
     },
-    updateValue: (existing_value, char_to_add)=> {
+    updateValue: (props, char_to_add)=> {
       if(char_to_add.length === 1) {
-        return dispatch(updateValue(existing_value + char_to_add))
+        return dispatch(updateValue(props.input_value + char_to_add))
       } else if(/backspace/i.test(char_to_add)){
-        return dispatch(updateValue(existing_value.substring(0, existing_value.length-1)))
+        return dispatch(updateValue(props.input_value.substring(0, props.input_value.length-1)))
+      } else if(/enter/i.test(char_to_add)){
+        dispatch(addItem(updateIconTheme(props)));
+        return resetAddInput();
       }
     }
   }
