@@ -10,7 +10,7 @@ const AddInputPresenter = (props) => {
     <div id="add-item">
       <div>
         <div id="input-container">
-          <input type="text" id="new-color-value" style={{ color: props.text_color.hex_string, backgroundColor: props.background_color.hex_string }} value={ props.input_value } onKeyDown={(e)=> { return props.updateValue(props.input_value, e.key); } }/>
+          <input type="text" id="new-color-value" style={{ color: props.text_color.hex_string, backgroundColor: props.background_color.hex_string }} value={ props.input_value } onKeyDown={(e)=> { return props.updateValue(props, e.key); } }/>
           <ColorButton subject="text" toggle_state={ props.text_btn_toggle }/>
           <ColorButton subject="background" toggle_state={ props.background_btn_toggle }/>
         </div>
