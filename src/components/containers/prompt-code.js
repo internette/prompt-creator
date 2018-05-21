@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { colors } from '../exports';
 import PromptCodePresenter from '../presenters/prompt-code';
 
-import { togglePrompt } from '../actions';
+import { toggleCodeVisibility } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -13,8 +13,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    hideCode: ()=> {
-      // dispatch(togglePrompt(subject, color))
+    hideCode: (toggle_state)=> {
+      return dispatch(toggleCodeVisibility(!toggle_state))
     }
   }
 }

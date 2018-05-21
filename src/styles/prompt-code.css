@@ -4,6 +4,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: 0.2s; }
+  transition: 0.2s;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px); }
   .prompt.active {
     height: 100%; }
